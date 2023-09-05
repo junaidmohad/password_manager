@@ -6,17 +6,17 @@ from rest_framework.response import Response
 from .models import User
 from rest_framework.exceptions import AuthenticationFailed
 import jwt, datetime
-from rest_framework import viewsets
+# from rest_framework import viewsets
 
 # Create your views here.
-class RegisterView(viewsets.ViewSet):
+class RegisterView(APIView):
     def post(self, request):
         serializer = UserSerializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
+        serializer.is_valid(raise_exception=True) 
         serializer.save()
         return Response(serializer.data)
     
-class LoginView(viewsets.ViewSet):
+class LoginView(APIView):
     def post(self, request):
         email =  request.data['email']
         password = request.data['password']
@@ -39,7 +39,7 @@ class LoginView(viewsets.ViewSet):
 
         response = Response()
 
-        response.set_cookie(key='jwt', value=token, httponly=True)          #set_cookie() is a method of Response() and setting the httponly to true means that the frontend cant access the token
+        response.set_cookie(key='jwt', value=token, httponly=True)       #set_cookie() is a method of Response() and setting the httponly to true means that the frontend cant access the token
  
         response.data = {
             "jwt": token
@@ -47,7 +47,7 @@ class LoginView(viewsets.ViewSet):
 
         return response
 
-class UserView(viewsets.ViewSet):
+class UserView(APIView):
     def get(self, request):
         token = request.COOKIES.get('jwt')
 
@@ -66,7 +66,7 @@ class UserView(viewsets.ViewSet):
 
         return Response(serializer.data)
 
-class LogoutView(viewsets.ViewSet):
+class LogoutView(APIView):
     def post(self, request):
         response = Response()
         response.delete_cookie('jwt')

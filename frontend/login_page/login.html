@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<html>
+    <head>
+        <title>PassGuard</title>
+        <link rel="stylesheet" type="text/css" href="./login.css">
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child" style="float: left;">
+                <div id="info">
+                    <h1 style="margin: 0;"><span id="heading"></span><span id="cursor">|</span></h1>
+                    <p id="para"></p>
+                </div>
+            </div>
+            <div class="child" style="float: right;background-color: black;"></div>
+        </div>
+    </body>
+    <script src="./login.js"></script>
+</html>
+
+{% endblock content %}
