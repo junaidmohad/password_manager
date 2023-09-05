@@ -13,5 +13,3 @@ class User(AbstractUser):
 
 #no custom user manager?
 
-class facts(models.Model):
-    fact = models.CharField(max_length = 500)

@@ -1,0 +1,42 @@
+body{
+    background-image:url('./bg_image.jpg');
+    background-size: cover;
+}
+.parent{
+    position:relative;
+    height:90%;
+    top:5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding:3%;
+    box-sizing: border-box;
+}
+.child{
+    padding:5%;
+    width:46%;
+    height:100%;
+    float:left;
+    box-sizing: border-box;
+}
+#info{
+    text-align: justify;
+    color: red;
+    padding:10%;
+    position: relative;
+    top:15%;
+    /* background-color: black; */
+    height: 70%;
+    box-sizing: border-box;
+    padding-top: 5%;
+}
+
+#cursor{
+    animation:blink 0.6s linear;
+}
+@keyframes blink{
+    0%{opacity:100%;}
+    100%{opacity:0%;}
+}
+span{
+    margin: 0;
+}
