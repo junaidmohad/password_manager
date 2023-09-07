@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    box-sizing: border-box;
+    padding:0% 0% 0% 0%;
+    background-image: url('./bg_image2.jpg');
+    background-size:cover;
+    height: 100%;
+    margin: 0%;
+    align-items: center;
+    justify-content:space-around;
+
+}
+.child{
+    box-sizing: border-box;
+    width:30%;
+}
