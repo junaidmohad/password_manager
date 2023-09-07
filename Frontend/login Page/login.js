@@ -22,6 +22,5 @@ const typing = async function(data){
     typeWriter(30,'para',data);
 }
 //Data to be retrieved will be stored in head and data. Head will always remain the same
-const data = `65% more passwords were compromised in 2022 than 2020...
-38% of Americans report having at least one of their passwords cracked or guessed...`
+const data = `Add Fact here after retrieving from database`
 typing(data);
