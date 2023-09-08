@@ -1,0 +1,8 @@
+@import url('./Buttons/Buttons.css');
+#loginBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90%;
+    padding: 2%;
+}
